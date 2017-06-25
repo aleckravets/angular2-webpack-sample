@@ -1,0 +1,9 @@
+<div *ngIf="!isLoading">
+    <record #record
+          *ngFor="let file of playlist.records"
+          [file]="file"
+          (dblclick)="play(record)"
+          (mousedown)="select(record)"></record>
+</div>
+
+<div *ngIf="isLoading">Loading...</div>

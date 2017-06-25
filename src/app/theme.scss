@@ -1,0 +1,21 @@
+@import '../../node_modules/@angular/material/core/theming/all-theme';
+
+@include md-core();
+
+// default theme
+$primary: md-palette($md-indigo);
+$accent:  md-palette($md-pink, A200, A100, A400);
+
+$theme: md-light-theme($primary, $accent);
+
+@include angular-material-theme($theme);
+
+// dark theme triggered by setting a class name of the app container element
+.dark-theme {
+	$dark-primary: md-palette($md-grey, 700, 500, 800);
+	$dark-accent:  md-palette($md-green, A200, A100, A400);
+
+	$dark-theme: md-dark-theme($dark-primary, $dark-accent);
+
+	@include angular-material-theme($dark-theme);
+}

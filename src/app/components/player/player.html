@@ -1,0 +1,54 @@
+<div class="player-container">
+	<md-toolbar class="player-container__header" color="primary">
+		<span>Drive Music Player</span>
+
+		<!-- This fills the remaining space of the current row -->
+		<span class="example-fill-remaining-space">
+			<controls></controls>
+		</span>
+
+		<button md-button (click)="app.toggleDarkTheme()">TOGGLE DARK THEME</button>
+	</md-toolbar>
+
+	<div class="player-container__main">
+		<div class="player-container__left-col">
+			<tree [roots]="treeRoots"
+						[options]="getTreeOptions()"
+						(onSelectNode)="onSelectNode($event)">
+			</tree>
+		</div>
+		<div class="player-container__middle-col">
+			<router-outlet></router-outlet>
+		</div>
+		<div class="player-container__right-col">
+			<playlist></playlist>
+		</div>
+	</div>
+
+	<div class="player-container__footer">
+		I'm footer
+	</div>
+</div>
+
+<!--<div id="content-wrapper">-->
+<!--<div id="content-col-wrapper">-->
+<!--<div id="content-col" class="col">-->
+<!--<div id="resize-bar-left" class="resize-bar" ng-mousedown="resizeBarMousedown($event)"></div>-->
+<!--<div id="resize-bar-right" class="resize-bar" ng-mousedown="resizeBarMousedown($event)"></div>-->
+<!--<div class="col-inner">-->
+<!--<playlist></playlist>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div id="left-col" class="col">-->
+<!--<div class="col-inner">-->
+<!--<button (click)="login()">Login</button>-->
+<!--<tree [roots]="rootNodes"></tree>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div id="right-col" class="col">-->
+<!--<div class="col-inner">-->
+<!--<playlist-manager></playlist-manager>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->

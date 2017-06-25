@@ -1,0 +1,21 @@
+include ../../mixins
+
++b.player-container
+	md-toolbar.player-container__header(color="primary")
+		span Drive Music Player
+		span
+			controls
+
+		button(md-button (click)="app.toggleDarkTheme()") TOGGLE DARK THEME
+
+	+e.main1
+		+e.left-col
+			tree([roots]="treeRoots" [options]="getTreeOptions()"	(onSelectNode)="onSelectNode($event)")
+
+		+e.middle-col
+			router-outlet
+
+		+e.right-col
+			playlist
+
+	+e.footer I'm footer

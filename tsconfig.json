@@ -1,15 +1,15 @@
 {
   "compilerOptions": {
     "target": "es5",
+//		"lib": ["dom", "es6", "es2015.promise"],
     "module": "commonjs",
     "moduleResolution": "node",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "removeComments": false,
+    "removeComments": true,
     "noImplicitAny": false,
-    "baseUrl": "src",
-    "rootDir": "src",
-    "outDir": "compile"
+		"outDir": "dist/tsc",
+		"types": ["node", "core-js", "gapi"]
   }
 }
